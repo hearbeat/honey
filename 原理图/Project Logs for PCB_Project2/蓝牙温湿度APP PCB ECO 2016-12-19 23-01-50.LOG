@@ -1,0 +1,36 @@
+Change Component DesignItemId : Designator=C4 Old DesignItemId= New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C1 Old DesignItemId= New DesignItemId=Cap
+Change Component DesignItemId : Designator=C2 Old DesignItemId= New DesignItemId=Cap
+Change Component DesignItemId : Designator=C5 Old DesignItemId= New DesignItemId=Cap
+Change Component DesignItemId : Designator=D1 Old DesignItemId= New DesignItemId=LED0
+Change Component DesignItemId : Designator=D2 Old DesignItemId= New DesignItemId=LED0
+Change Component DesignItemId : Designator=D3 Old DesignItemId= New DesignItemId=LED0
+Change Component DesignItemId : Designator=J1 Old DesignItemId= New DesignItemId=PHONEJACK
+Change Component DesignItemId : Designator=R1 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R2 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R3 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R4 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R5 Old DesignItemId= New DesignItemId=Res2
+Change Component DesignItemId : Designator=K1 Old DesignItemId= New DesignItemId=SW-AJ
+Change Component DesignItemId : Designator=Y1 Old DesignItemId= New DesignItemId=XTAL
+Change Component Description : Designator=U1 Old Description= New Description=8-Bit Microcontroller with 4K Flash ROM
+Change Component Description : Designator=C1 Old Description= New Description=Capacitor
+Change Component Description : Designator=C2 Old Description= New Description=Capacitor
+Change Component Description : Designator=C4 Old Description= New Description=Capacitor
+Change Component Description : Designator=C5 Old Description= New Description=Capacitor
+Change Component Description : Designator=Y1 Old Description= New Description=Crystal Oscillator
+Change Component Description : Designator=C3 Old Description= New Description=Polarized Capacitor (Radial)
+Change Component Description : Designator=R1 Old Description= New Description=Resistor
+Change Component Description : Designator=R2 Old Description= New Description=Resistor
+Change Component Description : Designator=R3 Old Description= New Description=Resistor
+Change Component Description : Designator=R4 Old Description= New Description=Resistor
+Change Component Description : Designator=R5 Old Description= New Description=Resistor
+Change Component Description : Designator=D1 Old Description= New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=D2 Old Description= New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=D3 Old Description= New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=S1 Old Description=SPDT Subminiature Toggle Switch, R New Description=SPDT Subminiature Toggle Switch, Right Angle Mounting, Vertical Actuation
+Change Component Library : Designator=C4 Old Library=Miscellaneous D New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C5 Old Library=Miscellaneous D New Library=Miscellaneous Devices.IntLib
+Added Pin To Net: NetName=P36 Pin=U1-16
+Added Pin To Net: NetName=P37 Pin=U1-17
+Added Room: Name=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È

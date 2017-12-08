@@ -1,0 +1,164 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\banlei\Documents\WIFI APP温湿度板资料\单片机代码new\单片机代码\honey.uvproj
+Project File Date:  12/03/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+creating hex file from "honey"...
+"honey" - 0 Error(s), 2 Warning(s).

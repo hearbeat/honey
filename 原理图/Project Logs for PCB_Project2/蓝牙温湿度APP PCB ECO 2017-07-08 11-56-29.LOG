@@ -1,0 +1,67 @@
+Removed Pin From Net: NetName=GND Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C5-1
+Removed Pin From Net: NetName=VCC Pin=C5-2
+Removed Pin From Net: NetName=3V3 Pin=C6-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=ESP_RXD Pin=P5-1
+Removed Pin From Net: NetName=ESP_TXD Pin=P5-2
+Removed Pin From Net: NetName=GND Pin=P5-3
+Removed Pin From Net: NetName=VCC Pin=P5-4
+Removed Pin From Net: NetName=VCC Pin=U2-1
+Removed Pin From Net: NetName=GND Pin=U2-2
+Removed Pin From Net: NetName=VCC Pin=U2-3
+Removed Pin From Net: NetName=3V3 Pin=U2-5
+Removed Member From Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=C3
+Removed Member From Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=C5
+Removed Member From Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=C6
+Removed Member From Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=P5
+Removed Member From Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=U2
+Change Component DesignItemId : Designator=C4 Old DesignItemId= New DesignItemId=Cap2
+Change Component DesignItemId : Designator=C1 Old DesignItemId= New DesignItemId=Cap
+Change Component DesignItemId : Designator=C2 Old DesignItemId= New DesignItemId=Cap
+Change Component DesignItemId : Designator=J1 Old DesignItemId= New DesignItemId=PHONEJACK
+Change Component DesignItemId : Designator=R1 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R2 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R3 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R4 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R6 Old DesignItemId= New DesignItemId=Res1
+Change Component DesignItemId : Designator=R5 Old DesignItemId= New DesignItemId=Res2
+Change Component Description : Designator=C1 Old Description= New Description=Capacitor
+Change Component Description : Designator=C2 Old Description= New Description=Capacitor
+Change Component Description : Designator=C4 Old Description= New Description=Capacitor
+Change Component Description : Designator=Y1 Old Description= New Description=Crystal Oscillator
+Change Component Description : Designator=P4 Old Description= New Description=Header, 3-Pin
+Change Component Description : Designator=P1 Old Description= New Description=Header, 4-Pin
+Change Component Description : Designator=P2 Old Description= New Description=Header, 8-Pin
+Change Component Description : Designator=P3 Old Description= New Description=Header, 8-Pin
+Change Component Description : Designator=R1 Old Description= New Description=Resistor
+Change Component Description : Designator=R2 Old Description= New Description=Resistor
+Change Component Description : Designator=R3 Old Description= New Description=Resistor
+Change Component Description : Designator=R4 Old Description= New Description=Resistor
+Change Component Description : Designator=R5 Old Description= New Description=Resistor
+Change Component Description : Designator=R6 Old Description= New Description=Resistor
+Change Component Description : Designator=D1 Old Description= New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=D2 Old Description= New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=D3 Old Description= New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=U1 Old Description=8-Bit Microco New Description=8-Bit Microcontroller with 4K Flash ROM
+Change Component Description : Designator=S1 Old Description=SPDT Subminiature Toggle Switch, Right Angle Mo New Description=SPDT Subminiature Toggle Switch, Right Angle Mounting, Vertical Actuation
+Added Component: Designator=C26(CD5)
+Added Component: Designator=C27(0805)
+Added Component: Designator=C28(0805)
+Added Component: Designator=U4(SOT223)
+Added Pin To Net: NetName=3V3 Pin=C26-1
+Added Pin To Net: NetName=GND Pin=C26-2
+Added Pin To Net: NetName=GND Pin=C27-1
+Added Pin To Net: NetName=3V3 Pin=C28-1
+Added Pin To Net: NetName=GND Pin=C28-2
+Added Pin To Net: NetName=GND Pin=U4-2
+Added Pin To Net: NetName=3V3 Pin=U4-3
+Added Pin To Net: NetName=3V3 Pin=U4-3
+Added Pin To Net: NetName=VCC_5V Pin=C27-2
+Added Pin To Net: NetName=VCC_5V Pin=U4-1
+Added Net: Name=VCC_5V
+Added Member To Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=Component C26 47uf
+Added Member To Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=Component C27 104
+Added Member To Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=Component C28 104
+Added Member To Class: ClassName=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È Member=Component U4 1117-3.3
+Added Room: Name=µ¥Æ¬»úÀ¶ÑÀÎÂÊª¶È

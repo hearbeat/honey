@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\banlei\Documents\WIFI APP温湿度板资料\单片机代码new\单片机代码\test.uvproj
+Project File Date:  10/31/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(29): warning C280: 'i': unreferenced local variable
+MAIN.C(158): warning C280: 'i': unreferenced local variable
+linking...
+Program Size: data=107.0 xdata=0 code=1436
+creating hex file from "test"...
+"test" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(29): warning C280: 'i': unreferenced local variable
+MAIN.C(158): warning C280: 'i': unreferenced local variable
+linking...
+Program Size: data=107.0 xdata=0 code=1436
+creating hex file from "test"...
+"test" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(29): warning C280: 'i': unreferenced local variable
+MAIN.C(158): warning C280: 'i': unreferenced local variable
+linking...
+Program Size: data=107.0 xdata=0 code=1436
+creating hex file from "test"...
+"test" - 0 Error(s), 2 Warning(s).

@@ -1,0 +1,26 @@
+Change Component DesignItemId : Designator=J1 Old DesignItemId= New DesignItemId=PHONEJACK
+Change Component Description : Designator=C1 Old Description= New Description=Capacitor
+Change Component Description : Designator=C2 Old Description= New Description=Capacitor
+Change Component Description : Designator=C4 Old Description= New Description=Capacitor
+Change Component Description : Designator=C5 Old Description= New Description=Capacitor
+Change Component Description : Designator=R1 Old Description= New Description=Resistor
+Change Component Description : Designator=R2 Old Description= New Description=Resistor
+Change Component Description : Designator=R3 Old Description= New Description=Resistor
+Change Component Description : Designator=R4 Old Description= New Description=Resistor
+Change Component Description : Designator=R5 Old Description= New Description=Resistor
+Change Component Description : Designator=R6 Old Description= New Description=Resistor
+Change Component Description : Designator=U1 Old Description=8-Bit Microcontroller with New Description=8-Bit Microcontroller with 4K Flash ROM
+Change Component Description : Designator=Y1 Old Description=Cryst New Description=Crystal Oscillator
+Change Component Description : Designator=P4 Old Description=Header New Description=Header, 3-Pin
+Change Component Description : Designator=P1 Old Description=Header New Description=Header, 4-Pin
+Change Component Description : Designator=P5 Old Description=Header New Description=Header, 4-Pin
+Change Component Description : Designator=P2 Old Description=Header New Description=Header, 8-Pin
+Change Component Description : Designator=P3 Old Description=Header New Description=Header, 8-Pin
+Change Component Description : Designator=S1 Old Description=SPDT Subminiature Toggle Switch, Right Angle Mounting, Verti New Description=SPDT Subminiature Toggle Switch, Right Angle Mounting, Vertical Actuation
+Change Component Description : Designator=D1 Old Description=Typical INFR New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=D2 Old Description=Typical INFR New Description=Typical INFRARED GaAs LED
+Change Component Description : Designator=D3 Old Description=Typical INFR New Description=Typical INFRARED GaAs LED
+Added Pin To Net: NetName=P31 Pin=P7-2
+Added Pin To Net: NetName=P30 Pin=P7-7
+Change Net Name : Old Net Name=P30 New Net Name=ESP_TXD
+Change Net Name : Old Net Name=P31 New Net Name=ESP_RXD

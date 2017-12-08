@@ -1,0 +1,232 @@
+C51 COMPILER V9.00   MAIN                                                                  12/03/2017 23:19:17 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1           #include "DHT11.h" 
+   2           #include <stdio.h>
+   3           #include "string.h"
+   4           extern unsigned char  F16T,F16RH;              //温湿度数据
+   5          sbit LED1=P3^7;
+   6          sbit LED2=P3^6;
+   7          #define uchar unsigned char 
+   8          #define uint unsigned int
+   9          unsigned char idata Rxbuff[50],Rxnum;
+  10          unsigned char   Recwifi_data[5];
+  11          char *strx=0;
+  12          char *strx1=0;
+  13          char clinetid;//连接ID
+  14          unsigned char getflag;//获取标志
+  15          void Get_Clinet(void);
+  16          void InitUART(void)                      //这是串口的基本配置，配置他的波特率是9600.这些参数都是标准的。
+  17          {
+  18   1          TMOD = 0x20;
+  19   1          SCON = 0x50;
+  20   1          TH1 = 0xFD;
+  21   1          TL1 = TH1;
+  22   1          PCON = 0x00;
+  23   1          EA = 1;
+  24   1          ES = 1;
+  25   1          TR1 = 1;
+  26   1      }
+  27           void Clear_Buffer(void)//清空缓存
+  28          {
+  29   1                      int i;
+  30   1              
+  31   1              //      for(i=0;i<50;i++)
+  32   1              //      Rxbuff[i]=0;//
+  33   1                      Rxnum=0;
+  34   1      
+  35   1      }
+*** WARNING C280 IN LINE 29 OF MAIN.C: 'i': unreferenced local variable
+  36           
+  37          /******************************************************************************/
+  38          void delayms(unsigned int x)
+  39          {
+  40   1              unsigned int i;
+  41   1              while(x--)
+  42   1                      for(i=125;i>0;i--);
+  43   1      }
+  44          /*
+  45           * UART 发送一字节
+  46          */
+  47          void UART_send_byte(char dat)
+  48          {
+  49   1              SBUF = dat;
+  50   1              while (TI == 0);
+  51   1              TI = 0;
+  52   1      }
+  53          
+  54          /*
+C51 COMPILER V9.00   MAIN                                                                  12/03/2017 23:19:17 PAGE 2   
+
+  55           * UART 发送字符串
+  56          */
+  57          void Send_Str(unsigned char *buf)
+  58          {
+  59   1              while (*buf != '\0')
+  60   1              {
+  61   2                      UART_send_byte(*buf++);
+  62   2              }
+  63   1      }
+  64          
+  65          void ESP8266_SERVER(void)//服务器建立
+  66          {
+  67   1      
+  68   1              Send_Str("AT\r\n");
+  69   1              delayms(500);
+  70   1              Send_Str("AT\r\n");
+  71   1              delayms(500);
+  72   1              Send_Str("AT\r\n");
+  73   1              delayms(500);
+  74   1              Send_Str("ATE0\r\n");     //关闭回显
+  75   1              delayms(500);
+  76   1              Send_Str("AT+CWSAP=\042ESP8266_001\042,\0421234567890\042,5,3\r\n");      //设置显示名称和密码
+  77   1              delayms(500);
+  78   1              Send_Str("AT+CIPMUX=1\r\n");//启动多连接，建立服务器都需要配置
+  79   1              delayms(500);   
+  80   1              Clear_Buffer(); 
+  81   1              Send_Str("AT+CIPSERVER=1,8888\r\n");//建立服务器
+  82   1              delayms(500);   
+  83   1              strx=strstr((const char*)Rxbuff,(const char*)"OK");//等待建立完成
+  84   1              while(strx==NULL)
+  85   1              {               Clear_Buffer(); 
+  86   2                              delayms(500);
+  87   2                              strx=strstr((const char*)Rxbuff,(const char*)"OK");//等待建立完成
+  88   2              }
+  89   1              Clear_Buffer(); 
+  90   1      
+  91   1      }
+  92          void Get_Clinet(void)//判断是否获取到了客户端接入
+  93          {
+  94   1      
+  95   1                 uchar i;
+  96   1           
+  97   1                      strx=strstr((const char*)Rxbuff,(const char*)"CONNECT");//返回连接值
+  98   1                              if(strx)
+  99   1                      {
+ 100   2                        Clear_Buffer();       
+ 101   2                              getflag=1;
+ 102   2                      }
+ 103   1                      strx=strstr((const char*)Rxbuff,(const char*)"CLOSE");//返回断开连接
+ 104   1                              if(strx)
+ 105   1                      {
+ 106   2                        Clear_Buffer();       
+ 107   2                              getflag=0;
+ 108   2                      }
+ 109   1                      if(getflag)
+ 110   1                      {
+ 111   2                                      strx=strstr((const char*)Rxbuff,(const char*)"+IPD");//有数据返回
+ 112   2                                if(strx)//正常获取数据
+ 113   2                                       {
+ 114   3                                               clinetid=strx[5];
+ 115   3                                               strx=strstr((const char*)Rxbuff,(const char*)":");//有数据返回
+ 116   3                                               for(i=0;i<2;i++)
+C51 COMPILER V9.00   MAIN                                                                  12/03/2017 23:19:17 PAGE 3   
+
+ 117   3                                               Recwifi_data[i]=strx[1+i];               //获取手机对LED的控制
+ 118   3                                                if( Recwifi_data[0]=='1'&&   Recwifi_data[1]=='0'             )//关灯
+ 119   3                                                LED1=1;
+ 120   3                                                else  if( Recwifi_data[0]=='1'&&   Recwifi_data[1]=='1'               )//开灯
+ 121   3                                                LED1=0 ;
+ 122   3                                                if( Recwifi_data[0]=='2'&&   Recwifi_data[1]=='0'             )//关灯
+ 123   3                                                LED2=1;
+ 124   3                                                else  if( Recwifi_data[0]=='2'&&   Recwifi_data[1]=='1'               )//开灯
+ 125   3                                                LED2=0 ;
+ 126   3                                               Clear_Buffer();        
+ 127   3                       }
+ 128   2                                              
+ 129   2          }
+ 130   1      }
+ 131          void Send_DATA(uchar *buffer)
+ 132          {
+ 133   1      uchar i;
+ 134   1              Send_Str("AT+CIPSEND=0,7\r\n");
+ 135   1                      delayms(300);
+ 136   1              Send_Str(buffer);//发送数据
+ 137   1              delayms(100);
+ 138   1                      strx=strstr((const char*)Rxbuff,(const char*)"SEND OK");//返回OK
+ 139   1                      while(strx==NULL)
+ 140   1                      {
+ 141   2                                      delayms(100);
+ 142   2                                      strx=strstr((const char*)Rxbuff,(const char*)"SEND OK");//返回OK
+ 143   2                      }
+ 144   1                      strx=strstr((const char*)Rxbuff,(const char*)"+IPD");//有数据返回        ,顺便判断是否有数据返回
+ 145   1                        if(strx)//正常获取数据
+ 146   1                               {
+ 147   2                                       clinetid=strx[5];
+ 148   2                                       strx=strstr((const char*)Rxbuff,(const char*)":");//有数据返回
+ 149   2                                       for(i=0;i<5;i++)
+ 150   2                                       Recwifi_data[i]=strx[1+i];               //获取上位机设定的报警值
+ 151   2                                       Clear_Buffer();        
+ 152   2                   }
+ 153   1                              Clear_Buffer();  
+ 154   1      }
+ 155           void main()
+ 156           {
+ 157   1        unsigned char   Tx_Buf[10];
+ 158   1        uchar i;
+ 159   1        unsigned char LEDstatus;//灯的状态
+ 160   1              delayms(500);
+ 161   1              delayms(500);
+ 162   1              delayms(1000);    //延时一段时间，让WIFI模块稳定
+ 163   1              InitUART();                     //初始化串口
+ 164   1          ESP8266_SERVER();   //初始化ESP8266
+ 165   1              while(1)        
+ 166   1              {         
+ 167   2                 Get_Clinet();
+ 168   2                      if(getflag)
+ 169   2              {
+ 170   3                        getDHT11(); //获取温湿度值
+ 171   3                Tx_Buf[0]='T';        //帧头
+ 172   3                Tx_Buf[1]=F16T/10%10+0x30;             //将温湿度数据送往发送数组,送给蓝牙模块让手机APP显示
+ 173   3                Tx_Buf[2]=F16T%10+0x30;               
+ 174   3                Tx_Buf[3]=F16RH/10%10+0x30;
+ 175   3                Tx_Buf[4]=F16RH%10+0x30;
+ 176   3                      LEDstatus=LED1;
+ 177   3                 Tx_Buf[5]=LEDstatus+0x30;//发送灯的状态
+ 178   3                      LEDstatus=LED2;
+C51 COMPILER V9.00   MAIN                                                                  12/03/2017 23:19:17 PAGE 4   
+
+ 179   3                      Tx_Buf[6]=LEDstatus+0x30;
+ 180   3                 Send_DATA(Tx_Buf)    ;//发送数据
+ 181   3      
+ 182   3              
+ 183   3              }
+ 184   2              }
+ 185   1       }
+*** WARNING C280 IN LINE 158 OF MAIN.C: 'i': unreferenced local variable
+ 186          
+ 187          /*****************串口接收中断函数,接收蓝牙模块的数据*********************/
+ 188          void UARTInterrupt(void) interrupt 4
+ 189          {       
+ 190   1      if(RI)
+ 191   1          {
+ 192   2                      ES=0;
+ 193   2              RI = 0;
+ 194   2            Rxbuff[Rxnum++]=SBUF;
+ 195   2              if(Rxnum>=50)
+ 196   2                      Rxnum=0;
+ 197   2                  ES=1;
+ 198   2          }
+ 199   1        
+ 200   1      }
+ 201           
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    940    ----
+   CONSTANT SIZE    =    139    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     20      20
+   IDATA SIZE       =     51    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)
