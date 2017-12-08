@@ -21,6 +21,28 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "C:\\Users\\banlei\\wifi_led\\honey_app\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\banlei\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\5104a9217cc0de441be4e7cb107aba53\\res\\values-xlarge-land\\values.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endColumns": "63",
+                        "endOffsets": "115"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
         }
     ]
 }
